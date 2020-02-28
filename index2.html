@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Style2.css">
+    <title>Title</title>
+
+
+
+</head>
+<body>
+
+<div class="header">
+    <nav>
+        <div class="logo">
+            <p class="logo-text">Logo</p>
+            <div class="menu-icon">
+                <span class="line"></span><span class="line"></span><span class="line"></span>
+            </div>
+        </div>
+        <ul id="btn-list" class="">
+            <li class="btn-list-item"><a href="#" class="btn-navbar">Home</a></li>
+            <li class="btn-list-item"><a href="#" class="btn-navbar">About us</a></li>
+            <li class="btn-list-item"><a href="#" class="btn-navbar">Portfolio</a></li>
+            <li class="btn-list-item"><a href="#" class="btn-navbar">Contact</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.menu-icon').click(function () {
+            $('#btn-list').toggleClass('responsive');
+            $(this).toggleClass('x');
+        });
+        $(window).scroll(function () {
+            if ($(this).scrollTop()>100){
+                $('nav').addClass('nav-padding')
+            }else {
+                $('nav').removeClass('nav-padding')
+            }
+        });
+    })
+</script>
+
+
+</body>
+</html>
